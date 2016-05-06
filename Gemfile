@@ -12,10 +12,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'shoulda'
+  gem 'dotenv-rails'
+  gem 'awesome_print'
 end
 
 group :development do
