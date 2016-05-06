@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'materialize-sass'
 gem "seedbank"
 gem 'font-awesome-rails'
+gem 'enumerize'
 
 group :development, :test do
   gem 'pry-rails'
