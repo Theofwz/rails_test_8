@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim'
 gem 'simple_form'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'pry-rails'
