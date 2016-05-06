@@ -13,6 +13,7 @@ gem 'slim'
 gem 'simple_form'
 gem 'materialize-sass'
 gem "seedbank"
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'pry-rails'
