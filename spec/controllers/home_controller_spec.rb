@@ -7,6 +7,7 @@ describe HomeController, :type => :controller do
     end
 
     let!(:shoes)             { create(:shoe) }
+    let!(:brands)             { create(:brand) }
 
     it "show shoe list" do
       do_request

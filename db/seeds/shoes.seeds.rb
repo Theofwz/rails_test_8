@@ -25,47 +25,47 @@ after :brands do
 
   Shoe.create([
     {
-      name: 'New Balance Men\'s MX608V4 Training Shoe', shoe_code: 'MX608V4', price: 74.99, image: File.open(new_balance_path), brand_id: new_balance
+      name: 'New Balance Men\'s MX608V4 Training Shoe', shoe_code: 'MX608V4', price: 74.99, image: File.open(new_balance_path), brand: new_balance
     },
 
     {
-      name: 'Nike Free 4.0 Flyknit Sz 13 Mens Running Shoes ', shoe_code: 'MX608V4', price: 125.00, image: File.open(nike_flyknit_path), brand_id: nike
+      name: 'Nike Free 4.0 Flyknit Sz 13 Mens Running Shoes ', shoe_code: 'MX608V4', price: 125.00, image: File.open(nike_flyknit_path), brand: nike
     },
 
     {
-      name: 'Nike Flex 2015 Rn Sz 7 Mens Running Shoes', shoe_code: 'MX608V4', price: 74.99, image: File.open(nike_flex_path), brand_id: nike
+      name: 'Nike Flex 2015 Rn Sz 7 Mens Running Shoes', shoe_code: 'MX608V4', price: 74.99, image: File.open(nike_flex_path), brand: nike
     },
 
     {
-      name: 'Adidas Performance Men\'s Galactic Elite M Running Shoe', shoe_code: 'MX608V4', price: 62.99, image: File.open(adidas_elite_path), brand_id: adidas
+      name: 'Adidas Performance Men\'s Galactic Elite M Running Shoe', shoe_code: 'MX608V4', price: 62.99, image: File.open(adidas_elite_path), brand: adidas
     },
 
     {
-      name: 'Nike Free 5.0 Tr Fit 5 Synthetic Running Shoe', shoe_code: 'MX608V4', price: 103.99, image: File.open(nike_fit_path), brand_id: nike
+      name: 'Nike Free 5.0 Tr Fit 5 Synthetic Running Shoe', shoe_code: 'MX608V4', price: 103.99, image: File.open(nike_fit_path), brand: nike
     },
 
     {
-      name: 'PUMA Men\'s Tazon 6 Cross-Training Shoe', shoe_code: 'MX608V4', price: 99.99, image: File.open(puma_tazon_path), brand_id: puma
+      name: 'PUMA Men\'s Tazon 6 Cross-Training Shoe', shoe_code: 'MX608V4', price: 99.99, image: File.open(puma_tazon_path), brand: puma
     },
 
     {
-      name: 'Nike Free 5.0 Tr Fit 5 Print Sz 12 Womens Cross Training Shoes', shoe_code: 'MX608V4', price: 74.99, image: File.open(nike_print_path), brand_id: nike
+      name: 'Nike Free 5.0 Tr Fit 5 Print Sz 12 Womens Cross Training Shoes', shoe_code: 'MX608V4', price: 74.99, image: File.open(nike_print_path), brand: nike
     }, 
 
     {
-      name: 'PUMA Women\'s Ignite Mesh Running Shoe', shoe_code: 'MX608V4', price: 103.99, image: File.open(puma_ignite_path), brand_id: puma
+      name: 'PUMA Women\'s Ignite Mesh Running Shoe', shoe_code: 'MX608V4', price: 103.99, image: File.open(puma_ignite_path), brand: puma
     },
 
     {
-      name: 'Adidas Youths Stan Smith Leather Trainers', shoe_code: 'MX608V4', price: 54.99, image: File.open(new_balance_path), brand_id: adidas
+      name: 'Adidas Youths Stan Smith Leather Trainers', shoe_code: 'MX608V4', price: 54.99, image: File.open(new_balance_path), brand: adidas
     }, 
 
     {
-      name: 'Fila Men\'s Shake N Bake 3 Basketball Shoe', shoe_code: 'MX608V4', price: 73.99, image: File.open(fila_shake_path), brand_id: fila
+      name: 'Fila Men\'s Shake N Bake 3 Basketball Shoe', shoe_code: 'MX608V4', price: 73.99, image: File.open(fila_shake_path), brand: fila
     },
 
     {
-      name: 'ASICS Women\'s Matchplay Classic Golf Shoe', shoe_code: 'MX608V4', price: 74.99, image: File.open(asics_classic_path), brand_id: asics
+      name: 'ASICS Women\'s Matchplay Classic Golf Shoe', shoe_code: 'MX608V4', price: 74.99, image: File.open(asics_classic_path), brand: asics
     }
   ])
   puts "==== End ===="

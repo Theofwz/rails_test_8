@@ -2,15 +2,14 @@ doctype html
 html
   head
     title RailsTest8
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
 
   body
     header
       = render "shared/header"
-      = render partial: "shared/banner"
     main
       = yield
     footer
-      = render "shared/footer/main"
+      = render "shared/footer"

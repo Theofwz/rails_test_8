@@ -4,7 +4,12 @@ SimpleForm.setup do |config|
   config.button_class = 'waves-effect waves-light btn'
   config.boolean_label_class = nil
 
-  config.default_wrapper = :materialize_form
+  # config.default_wrapper = :materialize_form
+  config.wrapper_mappings = {
+    check_boxes: :vertical_radio_and_checkboxes,
+    radio_buttons: :vertical_radio_and_checkboxes,
+    boolean: :vertical_boolean
+  }
 
   config.wrappers :materialize_form, tag: 'div', class: 'input-field form-group', error_class: 'has-error' do |b|
     b.use :html5

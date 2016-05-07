@@ -1,1 +1,7 @@
 #home-index-container.container
+  .row
+    .col.l3
+      = render 'home/filter'
+    .col.l9
+      #results
+        = render partial: 'home/shoes', locals: { shoes: @shoes }

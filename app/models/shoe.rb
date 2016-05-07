@@ -8,4 +8,16 @@ class Shoe < ActiveRecord::Base
   has_attached_file :image, default_url: "/assets/shoes/nike_flex.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  def self.find_by_brand_ids(brand_ids)
+    where(brand: brand_ids)
+  end
+
+  def self.find_by_price_from(price_from)
+    where('price >= ?', price_from )
+  end
+
+  def self.find_by_price_to(price_to)
+    where('price <= ?', price_to )
+  end
+
 end

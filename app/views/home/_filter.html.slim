@@ -1,0 +1,14 @@
+.home-filter-container
+  p Refine by
+  = simple_form_for ShoeFilter.new(params[:shoe_filter]), url: home_index_path, html: { method: :get }, remote: true do |f|
+    h1 Brands
+    .row
+      = f.collection_check_boxes :brand_ids, Brand.all.map{ |b| [b.id, b.title]}, :first, :last
+    .row
+      .col.s6
+        = f.input :price_from, input_html: { type: "number" }
+        = f.input :price_to, input_html: { type: "number" }
+
+coffee:
+  $('.home-filter-container form').change ->
+    $(this).submit()
