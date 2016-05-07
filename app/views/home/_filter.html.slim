@@ -1,30 +1,41 @@
 .home-filter-container
-  label Refine by
-  = simple_form_for ShoeFilter.new(params[:shoe_filter]), url: home_index_path, html: { method: :get }, remote: true do |f|
-    h1 Brands
-    .row
+  .row
+    label Refine by
+    = simple_form_for ShoeFilter.new(params[:shoe_filter]), url: home_index_path, html: { method: :get }, remote: true do |f|
+      h1 Brands
       = f.collection_check_boxes :brand_ids, Brand.all.map{ |b| [b.id, b.title]}, :first, :last
-    .row
       .col.s6
-        #price
-        = f.input :price_from, input_html: { type: "number" }
-        = f.input :price_to, input_html: { type: "number" }
+        h1 Price
+        #price_bar
+        = f.input :price_from, as: :hidden
+        = f.input :price_to, as: :hidden
 
 coffee:
-  $('.home-filter-container form').change ->
+  $('#new_shoe_filter input').change ->
     $(this).submit()
 
 javascript:
-  var slider = document.getElementById('price');
-    noUiSlider.create(slider, {
-     start: [20, 80],
-     connect: true,
-     step: 1,
-     range: {
-       'min': 0,
-       'max': 100
-     },
-     format: wNumb({
-       decimals: 0
-     })
+  var price_bar = document.getElementById('price_bar');
+  noUiSlider.create(price_bar, {
+    start: [0, 200],
+    connect: true,
+    step: 50,
+    range: {
+      'min': 0,
+      'max': 200
+    },
+    format: wNumb({
+      decimals: 0
+    })
+  });
+  price_bar.noUiSlider.on('change', function( values, handle ) {
+    $('#shoe_filter_price_from').val(values[0])
+    $('#shoe_filter_price_to').val(values[1])
+
+    $('#new_shoe_filter').submit();
+  });
+
+  price_bar.noUiSlider.on('update', function( values, handle ) {
+    $('#shoe_filter_price_from').val(values[0])
+    $('#shoe_filter_price_to').val(values[1])
   });
