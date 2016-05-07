@@ -1,0 +1,29 @@
+.shared-pagination-container {
+  width: 100%;
+  display: 100%;
+  float: left;
+
+  span, em, a {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    padding-top: 8px;
+    display: inline-block;
+    text-align: center;
+    color: #000;
+    border-radius: 4px;
+  }
+
+  em {
+    background-color: #1976d2;
+    color: #fff;
+  }
+
+  a:hover {
+    color: #1976d2;
+  }
+
+  .previous_page, .next_page {
+    font-size: 20px; 
+  }
+}

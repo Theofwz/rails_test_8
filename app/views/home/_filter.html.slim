@@ -1,14 +1,12 @@
 .home-filter-container
-  .row
-    label Refine by
-    = simple_form_for ShoeFilter.new(params[:shoe_filter]), url: home_index_path, html: { method: :get }, remote: true do |f|
-      h1 Brands
-      = f.collection_check_boxes :brand_ids, Brand.all.map{ |b| [b.id, b.title]}, :first, :last
-      .col.s6
-        h1 Price
-        #price_bar
-        = f.input :price_from, as: :hidden
-        = f.input :price_to, as: :hidden
+  label Refine by
+  = simple_form_for ShoeFilter.new(params[:shoe_filter]), url: home_index_path, html: { method: :get }, remote: true do |f|
+    h1 Brands
+    = f.collection_check_boxes :brand_ids, Brand.all.map{ |b| [b.id, b.title]}, :first, :last
+    h1 Price
+    #price_bar
+    = f.input :price_from, as: :hidden
+    = f.input :price_to, as: :hidden
 
 coffee:
   $('#new_shoe_filter input').change ->
