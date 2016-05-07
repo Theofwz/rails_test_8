@@ -15,6 +15,7 @@ gem 'materialize-sass'
 gem "seedbank"
 gem 'font-awesome-rails'
 gem 'enumerize'
+gem 'paperclip'
 
 group :development, :test do
   gem 'pry-rails'
