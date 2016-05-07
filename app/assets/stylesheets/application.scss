@@ -3,3 +3,11 @@
 @import "materialize";
 @import "_mixins";
 @import "theme";
+
+@import "shared/_header";
+@import "shared/_menu";
+@import "shared/_footer";
+
+@import "home/_filter";
+@import "home/_shoes";
+@import "home/index";

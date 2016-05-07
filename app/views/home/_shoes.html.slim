@@ -1,5 +1,12 @@
 .home-shoes-container
-  - shoes.each do |shoe|
-    .row
-      .item
-        = shoe.name
+  span.count #{ @shoes.count } matching products
+  span.sort
+  .shoes
+    - shoes.each do |shoe|
+      .col.s4
+        .item
+          .image
+            = image_tag(shoe.image)
+          p.title = shoe.name
+          p.code = shoe.shoe_code
+          p.price $#{shoe.price}
