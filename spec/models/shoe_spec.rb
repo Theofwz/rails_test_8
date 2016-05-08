@@ -10,4 +10,25 @@ describe Shoe do
   context 'Associations' do
     it { is_expected.to belong_to :brand }
   end
+
+  describe '#find by brand ids' do
+    let! (:nike) { create(:brand, title: 'Nike') }
+    let! (:shoe) { create(:shoe, name: 'Nike for men', brand: nike) }
+
+    it 'show shoe have brand is nike' do
+      result = Shoe.find_by_brand_ids([nike.id])
+
+      expect(result).to include shoe
+    end
+  end
+
+  describe '#find by price from' do
+    let! (:print) { create(:shoe, name: 'print', price: 10) }
+
+    it 'shoe reult is print' do
+      result = Shoe.find_by_price_from(10)
+
+      expect(result).to include print
+    end
+  end
 end
