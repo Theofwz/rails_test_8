@@ -5,6 +5,7 @@ describe Shoe do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_presence_of :shoe_code }
     it { is_expected.to validate_presence_of :price }
+    it { is_expected.to validate_numericality_of(:price).is_greater_than_or_equal_to(0) }
   end
 
   context 'Associations' do
