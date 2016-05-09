@@ -13,7 +13,7 @@ class ShoeFilter
 
   def result
     shoes = Shoe.all
-    shoes = shoes.find_by_brand_ids(brand_ids)    if brand_ids.present? and brand_ids.any? &:present?
+    shoes = shoes.find_by_brand_ids(brand_ids)    if brand_ids.present? and !brand_ids.nil?
     shoes = shoes.find_by_price_from(price_from)  if price_from.present?
     shoes = shoes.find_by_price_to(price_to)      if price_to.present?
     shoes
